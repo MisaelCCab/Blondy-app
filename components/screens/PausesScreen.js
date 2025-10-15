@@ -72,7 +72,7 @@ const saveProgress = async (exerciseData) => {
     const user = JSON.parse(userData);
     console.log('Enviando progreso para usuario:', user.id);
     
-    const response = await fetch('http://31.220.50.7:3000/progress', {
+    const response = await fetch('http://[2a02:4780:10:40ef::1]:3001/progress', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
