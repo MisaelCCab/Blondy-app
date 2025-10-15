@@ -39,7 +39,7 @@ const ParaphraseScreen = ({ navigation }) => {
       const user = JSON.parse(userData);
       console.log('Enviando progreso para usuario:', user.id);
       
-      const response = await fetch('http://31.220.50.7/progress', {
+      const response = await fetch('http://31.220.50.7:3000/progress', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
