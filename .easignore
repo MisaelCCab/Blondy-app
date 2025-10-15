@@ -1,0 +1,20 @@
+@"
+# Backend - IGNORAR COMPLETAMENTE
+Backend/
+backend/
+server.js
+
+# Archivos de entorno
+.env
+*.env
+
+# Logs
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Carpetas de desarrollo
+.eas/
+"@ | Out-File -FilePath .easignore -Encoding utf8Get-ChildItem -Force | Where-Object Name -eq ".easignore"
