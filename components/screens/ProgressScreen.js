@@ -68,7 +68,7 @@ const ProgressScreen = ({ navigation, route }) => {
       console.log('User ID:', userId);
       
       // Cargar progreso de ejercicios regulares
-      const exercisesResponse = await fetch(`https://31.220.50.7/progress/stats/${userId}`);
+      const exercisesResponse = await fetch(`http://31.220.50.7/progress/stats/${userId}`);
       if (!exercisesResponse.ok) {
         throw new Error(`Error en ejercicios regulares: ${exercisesResponse.status}`);
       }
@@ -76,7 +76,7 @@ const ProgressScreen = ({ navigation, route }) => {
       console.log('Ejercicios regulares:', exercisesData);
 
       // Cargar progreso de ejercicios vocales
-      const vocalResponse = await fetch(`https://31.220.50.7/vocal-exercises/progress/${userId}`);
+      const vocalResponse = await fetch(`http://31.220.50.7/vocal-exercises/progress/${userId}`);
       if (!vocalResponse.ok) {
         throw new Error(`Error en ejercicios vocales: ${vocalResponse.status}`);
       }
@@ -84,12 +84,12 @@ const ProgressScreen = ({ navigation, route }) => {
       console.log('Ejercicios vocales respuesta:', vocalData);
 
       // Cargar estadísticas de ejercicios vocales
-      const vocalStatsResponse = await fetch(`https://31.220.50.7/vocal-exercises/stats/${userId}`);
+      const vocalStatsResponse = await fetch(`http://31.220.50.7/vocal-exercises/stats/${userId}`);
       const vocalStatsData = await vocalStatsResponse.json();
       console.log('Estadísticas vocales:', vocalStatsData);
 
       // Cargar retos de habla
-      const speechChallengesResponse = await fetch(`https://31.220.50.7/speech-challenges/${userId}`);
+      const speechChallengesResponse = await fetch(`http://31.220.50.7/speech-challenges/${userId}`);
       const speechChallengesData = await speechChallengesResponse.json();
       console.log('Retos de habla:', speechChallengesData);
 
