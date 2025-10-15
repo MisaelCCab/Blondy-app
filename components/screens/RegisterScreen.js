@@ -82,7 +82,7 @@ const RegisterScreen = ({ navigation }) => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://31.220.50.7/register', {
+      const response = await fetch('https://31.220.50.7/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -193,7 +193,7 @@ const SpeechChallengesScreen = ({ navigation, route }) => {
     try {
       console.log('🔄 Cargando retos para usuario:', userId);
       
-      const response = await fetch(`http://31.220.50.7/speech-challenges/${userId}`);
+      const response = await fetch(`https://31.220.50.7/speech-challenges/${userId}`);
       const data = await response.json();
       
       console.log('📊 Respuesta completa del servidor:', JSON.stringify(data, null, 2));
@@ -257,7 +257,7 @@ const SpeechChallengesScreen = ({ navigation, route }) => {
     try {
       console.log('🎯 Asignando reto diario para usuario:', userId);
       
-      const response = await fetch(`http://31.220.50.7/speech-challenges/assign-daily`, {
+      const response = await fetch(`https://31.220.50.7/speech-challenges/assign-daily`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -292,7 +292,7 @@ const SpeechChallengesScreen = ({ navigation, route }) => {
     try {
       console.log('🔄 Actualizando estado del reto:', { challengeId, status });
       
-      const response = await fetch(`http://31.220.50.7/speech-challenges/${challengeId}`, {
+      const response = await fetch(`https://31.220.50.7/speech-challenges/${challengeId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

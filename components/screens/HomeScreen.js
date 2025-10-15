@@ -57,7 +57,7 @@ const HomeScreen = ({ route, navigation }) => {
       const user = JSON.parse(userData);
       
       // Obtener el progreso del usuario desde el servidor
-      const response = await fetch(`http://31.220.50.7/progress/stats/${user.id}`);
+      const response = await fetch(`https://31.220.50.7/progress/stats/${user.id}`);
       
       if (response.ok) {
         const result = await response.json();
