@@ -75,7 +75,7 @@ const VocalExercisesScreen = ({ navigation, route }) => {
   const loadUserProgress = async (userId) => {
     try {
       console.log('🔄 Cargando progreso para userID:', userId);
-      const response = await fetch(`http://[2a02:4780:10:40ef::1]:3001/vocal-exercises/progress/${userId}`);
+      const response = await fetch(`http://31.220.50.7:3001/vocal-exercises/progress/${userId}`);
       const data = await response.json();
       
       console.log('📊 Respuesta del servidor:', data);
@@ -114,7 +114,7 @@ const VocalExercisesScreen = ({ navigation, route }) => {
     try {
       console.log('💾 Guardando progreso:', { userId, challengeId, weekNumber, status });
       
-      const response = await fetch(`http://[2a02:4780:10:40ef::1]:3001/vocal-exercises/progress`, {
+      const response = await fetch(`http://31.220.50.7:3001/vocal-exercises/progress`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
